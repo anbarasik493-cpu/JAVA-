@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class EvenOddSwitch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        sc.close();
+
+        // Use modulo 2 to get remainder (0 or 1)
+        int remainder = number % 2;
+
+        switch (remainder) {
+            case 0:
+                System.out.println("EVEN");
+                break;
+            case 1:
+                System.out.println("ODD");
+                break;
+            default:
+                // This case won't occur but included for completeness
+                System.out.println("Invalid input");
+                break;
+        }
+    }
+}
